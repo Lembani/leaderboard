@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  width: 300px;
+  font-size: 3em;
+  margin-left: 400px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.scores-container {
+  width: inherit;
+  margin-right: 25px;
+}
+
+.scores-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.recent-scores {
+  font-size: 1.7em;
+  color: #000;
+  margin-right: 15px;
+}
+
+.reset-btn {
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 0 0;
+  font-size: 17px;
+  border: 3px solid #000;
+}
+
+.scores {
+  border: 3px solid #333;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.score-item {
+  list-style: none;
+  padding: 5px 3px;
+}
+
+.shade {
+  background-color: #ddd;
+}
+
+.add-scores-container {
+  width: auto;
+  padding: 0;
+  margin-left: 25px;
+}
+
+.add-score {
+  font-size: 1.7em;
+  color: #000;
+}
+
+.add-score-form {
+  width: inherit;
+}
+
+.name-input {
+  border-radius: 0%;
+  margin-bottom: 15px;
+  border: 3px solid #000;
+  width: inherit;
+  padding: 2px 5px;
+}
+
+.score-input {
+  border-radius: 0%;
+  margin-bottom: 15px;
+  border: 3px solid #000;
+  padding: 2px 5px;
+}
+
+.submit-btn {
+  border: 3px solid #000;
+  float: right;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+}
