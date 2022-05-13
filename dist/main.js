@@ -116,17 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_show_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/show-scores.js */ \"./src/modules/show-scores.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', _modules_show_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/scores.js":
-/*!*******************************!*\
-  !*** ./src/modules/scores.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scores = [\n  {\n    name: 'Jane Doe',\n    score: 55,\n  },\n  {\n    name: 'John Smith',\n    score: 95,\n  },\n  {\n    name: 'Mary Cooper',\n    score: 15,\n  },\n  {\n    name: 'Luigi',\n    score: 79,\n  },\n  {\n    name: 'Samuel Jackson',\n    score: 95,\n  },\n  {\n    name: 'Larry',\n    score: 15,\n  },\n  {\n    name: 'Mario',\n    score: 79,\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/scores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_show_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/show-scores.js */ \"./src/modules/show-scores.js\");\n\n// import getScores from './modules/scores.js';\n\n\n\nconst resetBtn = document.querySelector('.reset-btn');\n\nconst baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XTo7fg7oWPnx9JO7IbQr/scores/';\n// Key: XTo7fg7oWPnx9JO7IbQr\n\nconst getScores = async () => {\n  const response = await fetch(baseUrl);\n  const data = await response.json();\n  console.log('Data log: ', data.result);\n  (0,_modules_show_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(data.result);\n};\n\ngetScores();\n\nresetBtn.addEventListener('click', () => {\n  getScores();\n});\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ }),
 
@@ -136,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _scores_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scores.js */ \"./src/modules/scores.js\");\n\n\nconst scoresContainer = document.querySelector('.scores');\n\nconst showScores = () => {\n  _scores_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].forEach((v, index) => {\n    let scoreList = '';\n    if (index % 2 === 0) {\n      scoreList = `\n      <li class=\"score-item\" id=\"${index}\">${v.name}: ${v.score}</li>\n  `;\n    } else {\n      scoreList = `\n      <li class=\"score-item shade\" id=\"${index}\">${v.name}: ${v.score}</li>\n  `;\n    }\n    scoresContainer.innerHTML += scoreList;\n  });\n\n  return scoresContainer;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showScores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/show-scores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scoresContainer = document.querySelector('.scores');\n\nconst showScores = (scores) => {\n  console.log('Scores from net: ', scores);\n  if (scores.length !== 0) {\n    scores.forEach((v, index) => {\n      let scoreList = '';\n      if (index % 2 === 0) {\n        scoreList = `\n        <li class=\"score-item\" id=\"${index}\">${v.name}: ${v.score}</li>\n    `;\n      } else {\n        scoreList = `\n        <li class=\"score-item shade\" id=\"${index}\">${v.name}: ${v.score}</li>\n    `;\n      }\n      scoresContainer.innerHTML += scoreList;\n    });\n  }\n  return scoresContainer;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showScores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/show-scores.js?");
 
 /***/ })
 
