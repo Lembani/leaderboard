@@ -1,17 +1,33 @@
 body {
   font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-color: cadetblue;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
 }
 
 .heading {
+  color: #fff;
   width: 300px;
   font-size: 3em;
-  margin-left: 400px;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 
 .main-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  padding: 15px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
 }
 
 .scores-container {
@@ -29,7 +45,7 @@ body {
 
 .recent-scores {
   font-size: 1.7em;
-  color: #000;
+  color: cadetblue;
   margin-right: 15px;
 }
 
@@ -37,24 +53,29 @@ body {
   padding: 0 10px;
   height: 30px;
   border-radius: 0 0;
+  border: 0;
+  color: cadetblue;
+  background-color: transparent;
   font-size: 17px;
-  border: 3px solid #000;
 }
 
 .scores {
-  border: 3px solid #333;
+  border: 1px solid cadetblue;
   list-style: none;
-  padding-left: 0;
+  padding: 0 0 5px 0;
   margin: 0;
+  border-radius: 8px 8px;
 }
 
 .score-item {
   list-style: none;
-  padding: 5px 3px;
+  padding: 5px 8px;
+  color: cadetblue;
 }
 
 .shade {
-  background-color: #ddd;
+  background-color: rgb(101, 161, 163);
+  color: #fff;
 }
 
 .add-scores-container {
@@ -65,7 +86,7 @@ body {
 
 .add-score {
   font-size: 1.7em;
-  color: #000;
+  color: cadetblue;
 }
 
 .add-score-form {
@@ -73,30 +94,48 @@ body {
 }
 
 .user-input {
-  border-radius: 0%;
   margin-bottom: 15px;
-  border: 3px solid #000;
+  border: 1px solid cadetblue;
+  border-radius: 4px 4px;
   width: inherit;
-  padding: 2px 5px;
+  padding: 6px 5px;
 }
 
 .score-input {
-  border-radius: 0%;
   margin-bottom: 15px;
-  border: 3px solid #000;
-  padding: 2px 5px;
+  border: 1px solid cadetblue;
+  border-radius: 4px 4px;
+  width: inherit;
+  padding: 6px 5px;
 }
 
 .submit-btn {
-  border: 3px solid #000;
+  border: 1px solid cadetblue;
+  background-color: cadetblue;
+  color: #fff;
+  padding: 8px 8px;
+  border-radius: 4px 4px;
+  font-size: 16px;
   float: right;
 }
 
 input::placeholder {
-  color: #000;
+  color: cadetblue;
   font-size: 15px;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: cadetblue;
+  color: #fff;
 }
