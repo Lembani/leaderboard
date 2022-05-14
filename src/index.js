@@ -14,3 +14,10 @@ resetBtn.addEventListener('click', () => {
 submitBtn.addEventListener('click', () => {
   addScore();
 });
+
+const footer = document.querySelector('.footer');
+const date = new Date();
+const footerContent = `
+<p>Copyright &copy ${date.getFullYear()}. All rights reserved.</p>
+`;
+footer.innerHTML = footerContent;
