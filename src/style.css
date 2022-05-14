@@ -9,7 +9,7 @@ header {
   margin-top: 0;
   margin-bottom: 20px;
   background-color: cadetblue;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px,rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
 }
 
 .heading {
@@ -27,7 +27,7 @@ header {
   width: 600px;
   margin: 0 auto;
   padding: 15px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px,rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
 }
 
 .scores-container {
@@ -76,7 +76,6 @@ header {
 .shade {
   background-color: rgb(101, 161, 163);
   color: #fff;
-
 }
 
 .add-scores-container {
@@ -95,7 +94,6 @@ header {
 }
 
 .user-input {
-  border-radius: 0%;
   margin-bottom: 15px;
   border: 1px solid cadetblue;
   border-radius: 4px 4px;
@@ -104,7 +102,6 @@ header {
 }
 
 .score-input {
-  border-radius: 0%;
   margin-bottom: 15px;
   border: 1px solid cadetblue;
   border-radius: 4px 4px;
