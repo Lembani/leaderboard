@@ -12,8 +12,8 @@
 
 ## Live Demo Link
 
-The website is deployed using Github Pages.
-Click the [Link to Live Demo](https://lembani.github.io/leaderboard)
+The website is deployed using Netlify.
+Click the [Link to Live Demo](https://leaderboard-lembsys.netlify.app/)
 
 ## Getting Started
 
